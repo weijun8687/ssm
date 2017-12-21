@@ -4,4 +4,9 @@
   	<select id="queryStudent" resultType="student">
   		select * from student
   	</select>
+
+	<select id="queryStudentByName" parameterType="String" resultType="student">
+		SELECT  * FROM student WHERE name= #{name}
+	</select>
+
 </mapper>

@@ -18,4 +18,9 @@ public class StudentServiceImpl implements StudentService {
     public List<Student> selectAllStudent() {
         return mapper.queryStudent();
     }
+
+    @Override
+    public List<Student> selectStudentByName(String name) {
+        return mapper.queryStudentByName(name);
+    }
 }

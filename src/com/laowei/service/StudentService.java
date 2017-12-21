@@ -8,4 +8,7 @@ public interface StudentService {
 
 
     List<Student> selectAllStudent();
+
+    List<Student> selectStudentByName(String name);
+
 }
