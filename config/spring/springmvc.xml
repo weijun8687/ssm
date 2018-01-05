@@ -26,5 +26,15 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+		<mvc:interceptor>
+			<!--这里写请求路径-->
+			<mvc:mapping path="/**"/>
+			<!--这里写拦截器路径-->
+			<bean class="com.laowei.interceptor.springmvcInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
 
 </beans>
